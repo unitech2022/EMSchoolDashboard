@@ -21,6 +21,7 @@ class AuthCubit extends Cubit<AuthState> {
 
   /// login
   Future loginAdmin(BuildContext context, {userName, password}) async {
+      debugPrint(" ===== > loginUser");
     emit(state.copyWith(loginSignUpState: RequestState.loading));
     var data = FormData.fromMap({'UserName': userName, 'Password': password});
 
